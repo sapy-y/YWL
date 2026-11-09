@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+
+  --color-ywl-pink: #ec4899;
+  --color-ywl-pink-dark: #c2185b;
+  --color-ywl-magenta: #d6178f;
+  --color-ywl-purple: #7b2d8e;
+  --color-ywl-purple-light: #e6cdf0;
+  --color-ywl-black: #1a1a1a;
+  --color-ywl-cream: #fff8fa;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-ywl-black);
+    background-color: var(--color-ywl-cream);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, var(--color-ywl-magenta), var(--color-ywl-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn-primary {
+    @apply inline-block rounded-none bg-ywl-pink px-7 py-3 font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:bg-ywl-pink-dark hover:shadow-lg active:translate-y-0 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-block rounded-none border-2 border-ywl-pink px-7 py-3 font-semibold text-ywl-pink transition duration-200 hover:-translate-y-0.5 hover:bg-ywl-pink hover:text-white hover:shadow-lg active:translate-y-0 active:scale-95;
+  }
+
+  .section {
+    @apply mx-auto max-w-6xl px-6 py-16 md:py-24;
+  }
+
+  .eyebrow {
+    @apply mb-3 inline-block text-sm font-bold uppercase tracking-widest text-ywl-pink;
+  }
+
+  .blob {
+    @apply pointer-events-none absolute rounded-full opacity-60 blur-3xl;
+    animation: blob-float 14s ease-in-out infinite;
+  }
+}
+
+@keyframes blob-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(3%, 6%) scale(1.08);
+  }
+  66% {
+    transform: translate(-4%, -3%) scale(0.95);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}
