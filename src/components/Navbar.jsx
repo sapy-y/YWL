@@ -8,6 +8,7 @@ const links = [
   { to: "/a-propos", label: "À propos" },
   { to: "/activites", label: "Nos activités" },
   { to: "/evenements", label: "Événements" },
+  { to: "/agenda", label: "Agenda" },
   { to: "/impact", label: "YWL Impact" },
   { to: "/guests", label: "Nos Guest" },
   { to: "/galerie", label: "Galerie" },

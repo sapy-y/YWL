@@ -26,6 +26,7 @@ export default function Footer() {
             <li><Link className="hover:text-white" to="/a-propos">À propos</Link></li>
             <li><Link className="hover:text-white" to="/activites">Nos activités</Link></li>
             <li><Link className="hover:text-white" to="/evenements">Événements</Link></li>
+            <li><Link className="hover:text-white" to="/agenda">Agenda</Link></li>
             <li><Link className="hover:text-white" to="/impact">YWL Impact</Link></li>
             <li><Link className="hover:text-white" to="/rejoindre">Rejoindre YWL</Link></li>
           </ul>

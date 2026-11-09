@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Activities from "./pages/Activities";
 import Events from "./pages/Events";
+import Agenda from "./pages/Agenda";
 import Impact from "./pages/Impact";
 import Guests from "./pages/Guests";
 import Gallery from "./pages/Gallery";
@@ -43,6 +44,7 @@ export default function App() {
               <Route path="/a-propos" element={<About />} />
               <Route path="/activites" element={<Activities />} />
               <Route path="/evenements" element={<Events />} />
+              <Route path="/agenda" element={<Agenda />} />
               <Route path="/impact" element={<Impact />} />
               <Route path="/guests" element={<Guests />} />
               <Route path="/galerie" element={<Gallery />} />
